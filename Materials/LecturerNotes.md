@@ -33,7 +33,12 @@
 
   * 5.4 RStudio & GitHub
   
-* Prepare lecture slides as 13.3.1 HTML Slideshows with rmarkdown, then on 13.4.3 GitHub Pages
+
+
+Prepare lecture slides as 13.3.1 HTML Slideshows with rmarkdown, then on 13.4.3 GitHub Pages
+
+* From RStudio, Git tab, click on New Branch
+* Name the branch *gh-pages*
 
 
 **Practical:**
