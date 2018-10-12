@@ -13,7 +13,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 Check out my GitHub repository [Reproducible research with R](https://sdesabbata.github.io/ReproducibleResearch/).
 
-## Slide with Bullets
+## Today's topics
 
 - What is reproducible research
 - How to do reproducible research in R
