@@ -1,5 +1,5 @@
 ---
-title: "Reproducible Research in R"
+title: "Reproducible Research with R"
 author: "Stefano De Sabbata"
 date: "12 October 2018"
 output: ioslides_presentation
