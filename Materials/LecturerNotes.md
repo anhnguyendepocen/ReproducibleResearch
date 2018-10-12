@@ -37,9 +37,15 @@
 
 Prepare lecture slides as 13.3.1 HTML Slideshows with rmarkdown, then on 13.4.3 GitHub Pages
 
-* From RStudio, Git tab, click on New Branch
-* Name the branch *gh-pages*
-
+* Create new branch
+  * *git checkout --orphan gh-pages*
+  * From RStudio, Git tab, click on New Branch, name the branch *gh-pages*
+* To update from master use:
+  *git checkout gh-pages*
+  *git merge master*
+  *git commit -am "Update GitHub pages"*
+  *git push*
+  *git checkout master*
 
 **Practical:**
 
