@@ -9,6 +9,7 @@ output: ioslides_presentation
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
+
 ## Today's topics
 
 - What is reproducible research?
@@ -19,17 +20,35 @@ knitr::opts_chunk$set(echo = FALSE)
     - Markdown
     - Git
 
+
 ## What is reproducible research?
 
 In quantitative research, an analysis or project are considered to be **reproducible** if:
 
 - *"the data and code used to make a finding are available and they are sufficient for an independent researcher to recreate the finding."* [Christopher Gandrud, *Reproducible Research with R and R Studio*](https://www.crcpress.com/Reproducible-Research-with-R-and-R-Studio/Gandrud/p/book/9781498715379)
 
-
 That is becoming more and more important in science:
 
 - as programming and scripting are becoming integral in most disciplines
 - as the amount of data increases
+
+
+## Why?
+
+In **scientific research**:
+
+- verificability of claims through replication
+- incremental work, avoid duplication
+
+For your **working practice**:
+
+- better working practices
+    - coding
+    - project structure
+    - versioning
+- better teamwork
+- higher impact (not just results, but code, data, etc.)
+
 
 ## Reproducibility and software engineering
 
@@ -41,6 +60,7 @@ Core aspects of **software engineering** are:
 - **versioning**
 
 As programming becomes integral to research, similar necessities arise among scientists and data analyists.
+
 
 ## Reproducibility and "big data"
 
@@ -54,6 +74,7 @@ Beyond the hype of the moment, as the **amount** and **complexity** of data incr
 - room for error increases
 
 Workflow management software (e.g., ArcGIS ModelBuilder) is one answer, reproducible research based on script languages like R is another.
+
 
 ## Reproducibility in GIScience
 
