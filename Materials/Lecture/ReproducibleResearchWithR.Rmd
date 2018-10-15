@@ -9,16 +9,58 @@ output: ioslides_presentation
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-## R Markdown
-
-Check out my GitHub repository [Reproducible research with R](https://sdesabbata.github.io/ReproducibleResearch/).
-
 ## Today's topics
 
-- What is reproducible research
+- What is reproducible research?
 - How to do reproducible research in R
 - Tools: 
     - R
     - RStudio
     - Markdown
     - Git
+
+## What is reproducible research?
+
+In quantitative research, an analysis or project are considered to be **reproducible** if:
+
+- *"the data and code used to make a finding are available and they are sufficient for an independent researcher to recreate the finding."* [Christopher Gandrud, *Reproducible Research with R and R Studio*](https://www.crcpress.com/Reproducible-Research-with-R-and-R-Studio/Gandrud/p/book/9781498715379)
+
+
+That is becoming more and more important in science:
+
+- as programming and scripting are becoming integral in most disciplines
+- as the amount of data increases
+
+## Reproducibility and software engineering
+
+Core aspects of **software engineering** are:
+
+- project design
+- software **readibility**
+- testing
+- **versioning**
+
+As programming becomes integral to research, similar necessities arise among scientists and data analyists.
+
+## Reproducibility and "big data"
+
+There has been a lot of discussions about **"big data"**...
+
+- volume, velocity, variety, ...
+
+Beyond the hype of the moment, as the **amount** and **complexity** of data increases
+
+- the time required to replicate an analysis using point-and-click software becomes unsustainable
+- room for error increases
+
+Workflow management software (e.g., ArcGIS ModelBuilder) is one answer, reproducible research based on script languages like R is another.
+
+## Reproducibility in GIScience
+
+
+
+
+## R Markdown
+
+Check out my GitHub repository [Reproducible research with R](https://sdesabbata.github.io/ReproducibleResearch/).
+
