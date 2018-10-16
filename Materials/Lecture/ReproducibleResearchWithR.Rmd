@@ -24,6 +24,7 @@ knitr::opts_chunk$set(echo = FALSE)
     - Git
 
 
+
 ## What is reproducible research?
 
 In quantitative research, an analysis or project are considered to be **reproducible** if:
@@ -34,6 +35,7 @@ That is becoming more and more important in science:
 
 - as programming and scripting are becoming integral in most disciplines
 - as the amount of data increases
+
 
 
 ## Why?
@@ -53,6 +55,7 @@ For your **working practice**:
 - higher impact (not just results, but code, data, etc.)
 
 
+
 ## Reproducibility and software engineering
 
 Core aspects of **software engineering** are:
@@ -63,6 +66,7 @@ Core aspects of **software engineering** are:
 - **versioning**
 
 As programming becomes integral to research, similar necessities arise among scientists and data analyists.
+
 
 
 ## Reproducibility and "big data"
@@ -79,6 +83,7 @@ Beyond the hype of the moment, as the **amount** and **complexity** of data incr
 Workflow management software (e.g., ArcGIS ModelBuilder) is one answer, reproducible research based on script languages like R is another.
 
 
+
 ## Reproducibility in GIScience
 
 [Singleton *et al.*](https://www.tandfonline.com/doi/abs/10.1080/13658816.2015.1137579) have discussed the issue of reproducibility in GIScience, identifying the following best practices:
@@ -89,6 +94,30 @@ Workflow management software (e.g., ArcGIS ModelBuilder) is one answer, reproduc
 4. The peer review process and academic publishing should require submission of a workflow model and ideally open archiving of those materials necessary for
 replication.
 5. Where full reproducibility is not possible (commercial software or sensitive data) aim to adopt aspects attainable within circumstances
+
+
+
+## Reproduciblity in practice: 1
+
+### Document everything!
+
+In order to be reproducible, every step of your project should be documented in detail
+
+- data gathering
+- data analysis
+- results presentation
+
+Well documented R scripts are and excellent way to document your project. 
+
+
+
+## Reproduciblity in practice: 1
+
+The *sessionInfo* function can be used to print a record of all loaded packages and versions.
+
+```{r, echo=TRUE}
+sessionInfo()
+```
 
 
 ## R Markdown
