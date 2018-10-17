@@ -23,6 +23,7 @@ knitr::opts_chunk$set(echo = FALSE)
     - Markdown
     - Git
 
+Reference book: [Christopher Gandrud, *Reproducible Research with R and R Studio*](https://www.crcpress.com/Reproducible-Research-with-R-and-R-Studio/Gandrud/p/book/9781498715379) also available [on GitHub](https://github.com/christophergandrud/Rep-Res-Book)
 
 
 ## What is reproducible research?
@@ -65,7 +66,7 @@ Core aspects of **software engineering** are:
 - testing
 - **versioning**
 
-As programming becomes integral to research, similar necessities arise among scientists and data analyists.
+As programming becomes integral to research, similar necessities arise among scientists and data analysts.
 
 
 
@@ -118,6 +119,34 @@ The *sessionInfo* function can be used to print a record of all loaded packages 
 ```{r, echo=TRUE}
 sessionInfo()
 ```
+
+
+
+## Reproduciblity in practice: 2
+
+### Everything is a (text) file
+
+```{r, echo=TRUE}
+
+```
+
+
+## Reproduciblity in practice: 3
+
+### All files should be human readable
+
+
+
+## Reproduciblity in practice: 4
+
+### Explicitly tie your files together
+
+
+
+## Reproduciblity in practice: 5
+
+### Have a plan to organize, store, and make your files available
+
 
 
 ## R Markdown
