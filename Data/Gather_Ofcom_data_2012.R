@@ -5,14 +5,17 @@
 
 library(tidyverse)
 
-# Gather the data from the website
-# Skipping first two rows containing column names
-# Adding shorter column names
+# Loading data from Ofcom website
 coverage_data <- 
+  
+  # Gather the data from the website
+  # Skipping first two rows containing column names
+  # Adding shorter column names
   read_csv(
     file = "https://www.ofcom.org.uk/__data/assets/file/0034/94678/ofcom-uk-mobile-coverage-data-2012.csv", 
     skip = 2, col_names = FALSE
   ) %>%
+  
   rename( 
       LocalAuthority = X1,
       M2G_NoS = X2,
@@ -35,19 +38,19 @@ coverage_data <-
       M3G_All_Prem = X19,
       MonthMB_Prem = X20
   ) %>%
+  
   # Percentages are read as strings
   # Remove percentage symbol
   mutate_at(
     2:19,
     ~str_replace(., "%", "") # remake of the function using tilde and dot
   ) %>%
+  
   # Transform strings to numeric
   mutate_at(
     2:19,
     ~as.numeric(.) # remake of the function using tilde and dot
   )
 
-#coverage_data
-
 # Save data to csv
-write_csv(coverage_data, "Data/ofcom_mobile_coverage_2012.csv")
+write_csv(coverage_data, path = "Data/ofcom_mobile_coverage_2012.csv")
