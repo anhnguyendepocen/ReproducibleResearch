@@ -7,5 +7,8 @@
 
 system("git checkout gh-pages")
 system("git merge master")
+
+# NOTE: Use only if login credential have just been used
 system("git push")
+
 system("git checkout master")
