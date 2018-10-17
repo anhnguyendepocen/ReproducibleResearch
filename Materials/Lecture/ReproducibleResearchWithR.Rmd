@@ -126,7 +126,7 @@ sessionInfo()
 
 ### Everything is a (text) file
 
-```{r, echo=TRUE}
+```{r}
 
 ```
 

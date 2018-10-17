@@ -3,31 +3,51 @@
 # regarding the UK mobile network coverage in 2012
 ##########
 
-library(readr)
+library(tidyverse)
 
 # Gather the data from the website
-# Skipping first row, that contains an extra head title for the data
-coverage_original_data <- read_csv(
-  "https://www.ofcom.org.uk/__data/assets/file/0034/94678/ofcom-uk-mobile-coverage-data-2012.csv", 
-  skip=1
-)
+# Skipping first two rows containing column names
+# Adding shorter column names
+coverage_data <- 
+  read_csv(
+    file = "https://www.ofcom.org.uk/__data/assets/file/0034/94678/ofcom-uk-mobile-coverage-data-2012.csv", 
+    skip = 2, col_names = FALSE
+  ) %>%
+  rename( 
+      LocalAuthority = X1,
+      M2G_NoS = X2,
+      M2G_1op = X3,
+      M2G_2op = X4,
+      M2G_All = X5,
+      M2G_NoS_Prem = X6,
+      M2G_1op_Prem = X7,
+      M2G_2op_Prem = X8,
+      M2G_All_Prem = X9,
+      M3G_NoS = X10,
+      M3G_1op = X11,
+      M3G_2op = X12,
+      M3G_3op = X13,
+      M3G_All = X14,
+      M3G_NoS_Prem = X15,
+      M3G_1op_Prem = X16,
+      M3G_2op_Prem = X17,
+      M3G_3op_Prem = X18,
+      M3G_All_Prem = X19,
+      MonthMB_Prem = X20
+  )
 
-# Check data
-head(coverage_original_data[,c(1,2)], n=3)
+mutate_at(coverage_data,
+    2:19,
+    ~str_replace(., "%", "")
+  )
 
-# Copy and change column names
-coverage <- as.data.frame(coverage_original_data)
-colnames(coverage) <- c("LocalAuthority",
-                        "M2G.NoS","M2G.1op","M2G.2op","M2G.All",
-                        "M2G.NoS.Prem","M2G.1op.Prem","M2G.2op.Prem","M2G.All.Prem",
-                        "M3G.NoS","M3G.1op","M3G.2op","M3G.3op","M3G.All",
-                        "M3G.NoS.Prem","M3G.1op.Prem","M3G.2op.Prem","M3G.3op.Prem","M3G.All.Prem",
-                        "MonthMB.Prem")
-
+coverage_data
 
 # Transforming percentages strings to numbers
 for(i in 2:19){
-  coverage[,i] <- as.numeric( gsub("%", "", coverage[,i]) )
+  #coverage[,i] <- as.numeric( gsub("%", "", coverage[,i]) )
+  coverage_data <- coverage_data %>%
+    mutate_a
 }
 
 
