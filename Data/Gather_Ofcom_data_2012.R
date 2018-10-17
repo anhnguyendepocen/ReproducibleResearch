@@ -35,10 +35,13 @@ coverage_data <-
       M3G_All_Prem = X19,
       MonthMB_Prem = X20
   ) %>%
+  # Percentages are read as strings
+  # Remove percentage symbol
   mutate_at(
     2:19,
     ~str_replace(., "%", "") # remake of the function using tilde and dot
   ) %>%
+  # Transform strings to numeric
   mutate_at(
     2:19,
     ~as.numeric(.) # remake of the function using tilde and dot
