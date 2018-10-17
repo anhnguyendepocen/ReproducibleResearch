@@ -34,25 +34,17 @@ coverage_data <-
       M3G_3op_Prem = X18,
       M3G_All_Prem = X19,
       MonthMB_Prem = X20
-  )
-
-mutate_at(coverage_data,
+  ) %>%
+  mutate_at(
     2:19,
-    ~str_replace(., "%", "")
+    ~str_replace(., "%", "") # remake of the function using tilde and dot
+  ) %>%
+  mutate_at(
+    2:19,
+    ~as.numeric(.) # remake of the function using tilde and dot
   )
 
-coverage_data
-
-# Transforming percentages strings to numbers
-for(i in 2:19){
-  #coverage[,i] <- as.numeric( gsub("%", "", coverage[,i]) )
-  coverage_data <- coverage_data %>%
-    mutate_a
-}
-
-
-# Check data
-head(coverage[,c(1,2)], n=3)
+#coverage_data
 
 # Save data to csv
-write_csv(coverage, "Data/ofcom_mobile_coverage_2012.csv")
+write_csv(coverage_data, "Data/ofcom_mobile_coverage_2012.csv")
