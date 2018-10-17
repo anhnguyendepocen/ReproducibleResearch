@@ -9,6 +9,7 @@ system("git checkout gh-pages")
 system("git merge master")
 
 # NOTE: Use only if login credential have just been used
+#    or use "git config credential.helper store" to store credentials
 system("git push")
 
 system("git checkout master")
