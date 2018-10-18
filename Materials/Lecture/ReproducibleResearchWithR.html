@@ -223,9 +223,9 @@
 <li>Where full reproducibility is not possible (commercial software or sensitive data) aim to adopt aspects attainable within circumstances</li>
 </ol>
 
-</article></slide><slide class=""><hgroup><h2>Reproduciblity in practice: 1</h2></hgroup><article  id="reproduciblity-in-practice-1">
+</article></slide><slide class="segue dark nobackground level1"><hgroup class = 'auto-fadein'><h2>Five practical tips for reproducible research</h2></hgroup><article  id="five-practical-tips-for-reproducible-research">
 
-<h3>Document everything!</h3>
+</article></slide><slide class=""><hgroup><h2>(1) Document everything!</h2></hgroup><article  id="document-everything">
 
 <p>In order to be reproducible, every step of your project should be documented in detail</p>
 
@@ -237,7 +237,7 @@
 
 <p>Well documented R scripts are and excellent way to document your project.</p>
 
-</article></slide><slide class=""><hgroup><h2>Reproduciblity in practice: 1</h2></hgroup><article  id="reproduciblity-in-practice-1-1">
+</article></slide><slide class=""><hgroup><h2>(1) Document everything!</h2></hgroup><article  id="document-everything-1">
 
 <p>The <em>sessionInfo</em> function can be used to print a record of all loaded packages and versions.</p>
 
@@ -268,21 +268,45 @@
 ##  [9] stringi_1.1.6   rmarkdown_1.8   knitr_1.17      stringr_1.2.0  
 ## [13] digest_0.6.12   evaluate_0.10.1</pre>
 
-</article></slide><slide class=""><hgroup><h2>Reproduciblity in practice: 2</h2></hgroup><article  id="reproduciblity-in-practice-2">
+</article></slide><slide class=""><hgroup><h2>(2) Everything is a (text) file</h2></hgroup><article  id="everything-is-a-text-file">
 
-<h3>Everything is a (text) file</h3>
+<p>Complex formats (e.g., .docx, .xlsx, .shp, ArcGIS .mxd)</p>
 
-</article></slide><slide class=""><hgroup><h2>Reproduciblity in practice: 3</h2></hgroup><article  id="reproduciblity-in-practice-3">
+<ul>
+<li>can become obsolete</li>
+<li>are not always portable</li>
+<li>usually require propetary software</li>
+</ul>
 
-<h3>All files should be human readable</h3>
+<p>Use the simplest format to <strong>future-proof</strong> your analysis.<br/><strong>Text files</strong> are the most versatile</p>
 
-</article></slide><slide class=""><hgroup><h2>Reproduciblity in practice: 4</h2></hgroup><article  id="reproduciblity-in-practice-4">
+<ul>
+<li>data: .txt, .csv, .tsv</li>
+<li>analysis: R scrpts, python scripts</li>
+<li>write-up: LaTeX, Markdown, HTML</li>
+</ul>
 
-<h3>Explicitly tie your files together</h3>
+</article></slide><slide class=""><hgroup><h2>(3) All files should be human readable</h2></hgroup><article  id="all-files-should-be-human-readable">
 
-</article></slide><slide class=""><hgroup><h2>Reproduciblity in practice: 5</h2></hgroup><article  id="reproduciblity-in-practice-5">
+<p>Create code that can be <strong>easily understandable</strong> to someone outside your project, including yourself in six-month time!</p>
 
-<h3>Have a plan to organize, store, and make your files available</h3>
+<ul>
+<li>use a style guide (e.g. <a href='http://style.tidyverse.org/' title=''>tidyverse</a>) consistently</li>
+<li>add a comment at the beginning of a file, including
+
+<ul>
+<li>date</li>
+<li>contributors</li>
+<li>other files the current file depends on</li>
+<li>materials, sources and other references</li>
+</ul></li>
+<li>add a comment before each code block, describing what the code does</li>
+<li>also add a comment before any line that could be ambiguous or particulary difficult or important</li>
+</ul>
+
+</article></slide><slide class=""><hgroup><h2>(4) Explicitly tie your files together</h2></hgroup><article  id="explicitly-tie-your-files-together">
+
+</article></slide><slide class=""><hgroup><h2>(5) Have a plan to organize, store, and make your files available</h2></hgroup><article  id="have-a-plan-to-organize-store-and-make-your-files-available">
 
 </article></slide><slide class=""><hgroup><h2>R Markdown</h2></hgroup><article  id="r-markdown">
 

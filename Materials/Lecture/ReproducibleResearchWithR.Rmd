@@ -98,9 +98,11 @@ replication.
 
 
 
-## Reproduciblity in practice: 1
+# Five practical tips for reproducible research
 
-### Document everything!
+
+
+## (1) Document everything!
 
 In order to be reproducible, every step of your project should be documented in detail
 
@@ -112,7 +114,7 @@ Well documented R scripts are and excellent way to document your project.
 
 
 
-## Reproduciblity in practice: 1
+## (1) Document everything!
 
 The *sessionInfo* function can be used to print a record of all loaded packages and versions.
 
@@ -122,30 +124,42 @@ sessionInfo()
 
 
 
-## Reproduciblity in practice: 2
+## (2) Everything is a (text) file
 
-### Everything is a (text) file
+Complex formats (e.g., .docx, .xlsx, .shp, ArcGIS .mxd)
 
-```{r}
+- can become obsolete
+- are not always portable
+- usually require propetary software
 
-```
+Use the simplest format to **future-proof** your analysis.<br/>**Text files** are the most versatile
 
-
-## Reproduciblity in practice: 3
-
-### All files should be human readable
-
-
-
-## Reproduciblity in practice: 4
-
-### Explicitly tie your files together
+- data: .txt, .csv, .tsv
+- analysis: R scrpts, python scripts
+- write-up: LaTeX, Markdown, HTML
 
 
 
-## Reproduciblity in practice: 5
+## (3) All files should be human readable
 
-### Have a plan to organize, store, and make your files available
+Create code that can be **easily understandable** to someone outside your project, including yourself in six-month time!
+
+- use a style guide (e.g. [tidyverse](http://style.tidyverse.org/)) consistently
+- add a comment at the beginning of a file, including
+    - date
+    - contributors
+    - other files the current file depends on
+    - materials, sources and other references 
+- add a comment before each code block, describing what the code does
+- also add a comment before any line that could be ambiguous or particulary difficult or important
+
+
+
+## (4) Explicitly tie your files together
+
+
+
+## (5) Have a plan to organize, store, and make your files available
 
 
 
