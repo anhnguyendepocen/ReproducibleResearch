@@ -4,8 +4,6 @@ author: "Dr Stefano De Sabbata<br/>School of Geography, Geology, and the Env.<br
 output:
   ioslides_presentation:
     template: ../IOSlides/UoL_Template.html
-    logo: ../IOSlides/uol_logo.png
-    favicon: ../IOSlides/uol_favicon.png
 ---
 
 ```{r setup, include=FALSE}

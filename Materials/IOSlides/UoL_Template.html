@@ -36,9 +36,10 @@ $endif$
         $if(analytics)$
         analytics: '$analytics$',
         $endif$
-        $if(favicon)$
-        favIcon: '$favicon$',
-        $endif$
+        //$if(logo)$
+        //favIcon: '$logo$',
+        //$endif$
+        favIcon: '../IOSlides/uol_favicon.png'
       },
 
       // Author information
@@ -96,14 +97,15 @@ $endfor$
       opacity: 0;
     }
 
-$if(logo)$
+/*$if(logo)$*/
     slides > slide:not(.nobackground):before {
       font-size: 12pt;
       content: "";
       position: absolute;
       bottom: 20px;
       left: 60px;
-      background: url($favicon$) no-repeat 0 50%;
+      /*background: url($logo$) no-repeat 0 50%;*/
+      background: url("../IOSlides/uol_logo.png") no-repeat 0 50%;
       -webkit-background-size: 30px 30px;
       -moz-background-size: 30px 30px;
       -o-background-size: 30px 30px;
@@ -112,7 +114,7 @@ $if(logo)$
       height: 30px;
       line-height: 1.9;
     }
-$endif$
+/*$endif$*/
   </style>
 
 $for(css)$
@@ -135,9 +137,7 @@ $if(include-before)$
   $endfor$
 $else$
   <slide class="title-slide segue nobackground">
-    $if(logo)$
-    <img src="$logo$" width="300px" style="margin-top: 30px">
-    $endif$
+    <img src="../IOSlides/uol_logo.png" width="300px" style="margin-top: 30px">
     <!-- The content of this hgroup is replaced programmatically through the slide_config.json. -->
     <hgroup class="auto-fadein">
       <h1 data-config-title><!-- populated from slide_config.json --></h1>
