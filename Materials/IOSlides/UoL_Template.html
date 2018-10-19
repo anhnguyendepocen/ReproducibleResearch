@@ -36,10 +36,9 @@ $endif$
         $if(analytics)$
         analytics: '$analytics$',
         $endif$
-        //$if(logo)$
-        //favIcon: '$logo$',
-        //$endif$
-        favIcon: '../IOSlides/uol_favicon.png'
+        $if(logo)$
+        favIcon: "../IOSlides/uol_crest.png",
+        $endif$
       },
 
       // Author information
@@ -97,24 +96,32 @@ $endfor$
       opacity: 0;
     }
 
-/*$if(logo)$*/
+$if(logo)$
     slides > slide:not(.nobackground):before {
       font-size: 12pt;
       content: "";
       position: absolute;
       bottom: 20px;
       left: 60px;
-      /*background: url($logo$) no-repeat 0 50%;*/
-      background: url("../IOSlides/uol_logo.png") no-repeat 0 50%;
-      -webkit-background-size: 30px 30px;
-      -moz-background-size: 30px 30px;
-      -o-background-size: 30px 30px;
-      background-size: 30px 30px;
+      background: url($logo$) no-repeat 0 50%;
+      /* To use if you want just the uni crest */
+      /*background: url("../IOSlides/uol_favicon.png") no-repeat 0 50%;*/ 
+      /* Changing size to 100px to get the uni logo visible */
+      /*-webkit-background-size: 30px 30px;*/
+      /*-moz-background-size: 30px 30px;*/
+      /*-o-background-size: 30px 30px;*/
+      /*background-size: 30px 30px;*/
+      -webkit-background-size: 100px;
+      -moz-background-size: 100px;
+      -o-background-size: 100px;
+      background-size: 100px;
       padding-left: 40px;
       height: 30px;
+      /* Adding width 100px to get the uni logo visible */
+      width: 100px;
       line-height: 1.9;
     }
-/*$endif$*/
+$endif$
   </style>
 
 $for(css)$
@@ -137,7 +144,9 @@ $if(include-before)$
   $endfor$
 $else$
   <slide class="title-slide segue nobackground">
-    <img src="../IOSlides/uol_logo.png" width="300px" style="margin-top: 30px">
+    $if(logo)$
+    <img src="$logo$" width="300px" style="margin-top: 30px">
+    $endif$
     <!-- The content of this hgroup is replaced programmatically through the slide_config.json. -->
     <hgroup class="auto-fadein">
       <h1 data-config-title><!-- populated from slide_config.json --></h1>
