@@ -196,15 +196,15 @@ system("cp Data/ofcom_mobile_coverage_2012.csv Materials/Lecture/")
 
 Reproducible research is particularly important when working in teams and to share and communicate your work.
 
-- Dropbox
+- [Dropbox](https://www.dropbox.com)
     - good option to work in teams, initially free
     - no versioning, branches
-- [Git](https://git-scm.com/)
+- [Git](https://git-scm.com)
     - free and opensource control system
     - great to work in teams and share your work publically
     - can be more difficult at first
-    - [GitHub](https://github.com/) public repositories are free, private ones are not
-    - [Bitbucket](https://bitbucket.org/product) offers free private repositories for non-commercial use
+    - [GitHub](https://github.com) public repositories are free, private ones are not
+    - [Bitbucket](https://bitbucket.org) offers free private repositories
 
 
 
@@ -212,3 +212,14 @@ Reproducible research is particularly important when working in teams and to sha
 
 My GitHub repository [Reproducible research with R](https://sdesabbata.github.io/ReproducibleResearch/) stores this week's lecture and practical session materials.
 
+<div class="img50">
+
+![](../Images/imgs002_github_repo_001.png){width=30%}
+
+<center>
+<font size="4">
+<a href="https://sdesabbata.github.io/ReproducibleResearch/">https://sdesabbata.github.io/ReproducibleResearch/</a>
+</font>
+<center>
+
+<div>
