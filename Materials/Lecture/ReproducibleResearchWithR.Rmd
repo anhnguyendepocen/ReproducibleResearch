@@ -157,13 +157,58 @@ Create code that can be **easily understandable** to someone outside your projec
 
 ## (4) Explicitly tie your files together
 
+Relationships between files in a project is not simple:
+
+- in which order are file executed?
+- when to copy file from one folder to another, and where?
+
+A common solution are **make files**
+
+- commonly written in *bash* on Linux systems
+- they can be written in R, using commands like
+    - *source* to execute R scripts
+    - *system* to interact with the operative system
 
 
-## (5) Have a plan to organize, store, and make your files available
+
+## (4) Explicitly tie your files together
+
+Example: *Make.R*
+
+```{r, echo=TRUE, eval=FALSE}
+##########
+# Example make file in R
+# Author: Stefano De Sabbata
+# Date: Oct 22, 2018
+##########
+
+
+# Step 1: execute script to gather data
+source("Data/Gather_Ofcom_data_2012.R")
+
+# Step 2: save a copy of the data in current folder
+system("cp Data/ofcom_mobile_coverage_2012.csv Materials/Lecture/")
+```
 
 
 
-## R Markdown
+## (5) Organize, store, share
 
-Check out my GitHub repository [Reproducible research with R](https://sdesabbata.github.io/ReproducibleResearch/).
+Reproducible research is particularly important when working in teams and to share and communicate your work.
+
+- Dropbox
+    - good option to work in teams, initially free
+    - no versioning, branches
+- [Git](https://git-scm.com/)
+    - free and opensource control system
+    - great to work in teams and share your work publically
+    - can be more difficult at first
+    - [GitHub](https://github.com/) public repositories are free, private ones are not
+    - [Bitbucket](https://bitbucket.org/product) offers free private repositories for non-commercial use
+
+
+
+## (5) Organize, store, share
+
+My GitHub repository [Reproducible research with R](https://sdesabbata.github.io/ReproducibleResearch/) stores this week's lecture and practical session materials.
 

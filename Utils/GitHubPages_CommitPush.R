@@ -2,6 +2,8 @@
 # R code to upload edits to the GitHub pages.
 # The code uses the function system to checkout the gh-pages git branch,
 # merges the master branch into it, push it to GitHub, and switches back to the master
+# Author: Stefano De Sabbata
+# Date: Oct 17, 2018
 ##########
 
 

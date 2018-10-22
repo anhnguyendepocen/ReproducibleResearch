@@ -315,9 +315,63 @@
 
 </article></slide><slide class=""><hgroup><h2>(4) Explicitly tie your files together</h2></hgroup><article  id="explicitly-tie-your-files-together">
 
-</article></slide><slide class=""><hgroup><h2>(5) Have a plan to organize, store, and make your files available</h2></hgroup><article  id="have-a-plan-to-organize-store-and-make-your-files-available">
+<p>Relationships between files in a project is not simple:</p>
 
-</article></slide><slide class=""><hgroup><h2>R Markdown</h2></hgroup><article  id="r-markdown">
+<ul>
+<li>in which order are file executed?</li>
+<li>when to copy file from one folder to another, and where?</li>
+</ul>
+
+<p>A common solution are <strong>make files</strong></p>
+
+<ul>
+<li>commonly written in <em>bash</em> on Linux systems</li>
+<li>they can be written in R, using commands like
+
+<ul>
+<li><em>source</em> to execute R scripts</li>
+<li><em>system</em> to interact with the operative system</li>
+</ul></li>
+</ul>
+
+</article></slide><slide class=""><hgroup><h2>(4) Explicitly tie your files together</h2></hgroup><article  id="explicitly-tie-your-files-together-1">
+
+<p>Example: <em>Make.R</em></p>
+
+<pre class = 'prettyprint lang-r'>##########
+# Example make file in R
+# Author: Stefano De Sabbata
+# Date: Oct 22, 2018
+##########
+
+
+# Step 1: execute script to gather data
+source(&quot;Data/Gather_Ofcom_data_2012.R&quot;)
+
+# Step 2: save a copy of the data in current folder
+system(&quot;cp Data/ofcom_mobile_coverage_2012.csv Materials/Lecture/&quot;)</pre>
+
+</article></slide><slide class=""><hgroup><h2>(5) Organize, store, share</h2></hgroup><article  id="organize-store-share">
+
+<p>Reproducible research is particularly important when working in teams and to share and communicate your work.</p>
+
+<ul>
+<li>Dropbox
+
+<ul>
+<li>good option to work in teams, initially free</li>
+<li>no versioning, branches</li>
+</ul></li>
+<li><a href='https://git-scm.com/' title=''>Git</a>
+
+<ul>
+<li>free and opensource control system</li>
+<li>great to work in teams and share your work publically</li>
+<li>can be more difficult at first</li>
+<li><a href='https://github.com/' title=''>GitHub</a> public repositories are free, private ones are not</li>
+<li><a href='https://bitbucket.org/product' title=''>Bitbucket</a> offers free private repositories for non-commercial use</li>
+</ul></li>
+</ul>
 
 <p>Check out my GitHub repository <a href='https://sdesabbata.github.io/ReproducibleResearch/' title=''>Reproducible research with R</a>.</p></article></slide>
 
