@@ -223,3 +223,70 @@ My GitHub repository [Reproducible research with R](https://sdesabbata.github.io
 <center>
 
 <div>
+
+
+
+# R and Markdown
+
+## Markdown
+
+**Markdown** is a simple markup language
+
+- allows to mark-up plain text 
+- to specify more complex features (such as *italics text*)
+- using a very simple [syntax](https://daringfireball.net/projects/markdown/syntax)
+
+Markdown can be used in conjunction with numerous tools
+
+- to produce HTML pages
+- or even more complex formats (such as PDF)
+
+These slides are written in Markdown
+
+
+
+## Markdown example code
+
+```
+### This is a third level heading
+
+#### (fourth) Rendering depends on the software used
+
+
+Text can be specified as *italic* or **bold**
+
+- and list can be created
+    - very simply
+
+1. also numberd lists
+    1. [add a link like this](http://le.ac.uk)
+
+|Tables |Can         |Be       |
+|-------|------------|---------|
+|a bit  |complicated |at first |
+```
+
+
+
+## Markdown example output
+
+<div class="plain">
+
+### This is a third level heading
+
+#### (fourth) Rendering depends on the software used
+
+
+Text can be specified as *italic* or **bold**
+
+- and list can be created
+    - very simply
+
+1. also numberd lists
+    1. [add a link like this](http://le.ac.uk)
+
+|Tables |Can         |Be       |
+|-------|------------|---------|
+|a bit  |complicated |at first |
+
+</div>

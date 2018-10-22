@@ -59,6 +59,11 @@
       font-weight: bold;
       color: #b9202f;
     }
+    
+    .plain b, strong {
+      font-weight: bold;
+      color: #000000;
+    }
 
     em {
       font-style: italic;
@@ -406,7 +411,86 @@ system(&quot;cp Data/ofcom_mobile_coverage_2012.csv Materials/Lecture/&quot;)</p
 
 <div>
 
-</article></slide>
+
+
+
+</article></slide><slide class="segue dark nobackground level1"><hgroup class = 'auto-fadein'><h2>R and Markdown</h2></hgroup><article  id="r-and-markdown">
+
+</article></slide><slide class=""><hgroup><h2>Markdown</h2></hgroup><article  id="markdown">
+
+<p><strong>Markdown</strong> is a simple markup language</p>
+
+<ul>
+<li>allows to mark-up plain text</li>
+<li>to specify more complex features (such as <em>italics text</em>)</li>
+<li>using a very simple <a href='https://daringfireball.net/projects/markdown/syntax' title=''>syntax</a></li>
+</ul>
+
+<p>Markdown can be used in conjunction with numerous tools</p>
+
+<ul>
+<li>to produce HTML pages</li>
+<li>or even more complex formats (such as PDF)</li>
+</ul>
+
+<p>These slides are written in Markdown</p>
+
+</article></slide><slide class=""><hgroup><h2>Markdown example code</h2></hgroup><article  id="markdown-example-code">
+
+<pre >### This is a third level heading
+
+#### (fourth) Rendering depends on the software used
+
+
+Text can be specified as *italic* or **bold**
+
+- and list can be created
+    - very simply
+
+1. also numberd lists
+    1. [add a link like this](http://le.ac.uk)
+
+|Tables |Can         |Be       |
+|-------|------------|---------|
+|a bit  |complicated |at first |</pre>
+
+</article></slide><slide class=""><hgroup><h2>Markdown example output</h2></hgroup><article  id="markdown-example-output">
+
+<div class="plain">
+<h3>This is a third level heading</h3>
+
+<h4>(fourth) Rendering depends on the software used</h4>
+
+<p>Text can be specified as <em>italic</em> or <strong>bold</strong></p>
+
+<ul>
+<li>and list can be created
+
+<ul>
+<li>very simply</li>
+</ul></li>
+</ul>
+
+<ol>
+<li>also numberd lists
+
+<ol>
+<li><a href='http://le.ac.uk' title=''>add a link like this</a></li>
+</ol></li>
+</ol>
+
+<table class = 'rmdtable'>
+<tr class="header">
+<th align="left">Tables</th>
+<th align="left">Can</th>
+<th align="left">Be</th>
+</tr>
+<tr class="odd">
+<td align="left">a bit</td>
+<td align="left">complicated</td>
+<td align="left">at first</td>
+</tr>
+</table></div></article></slide>
 
 
   <slide class="backdrop"></slide>
