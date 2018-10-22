@@ -16,12 +16,13 @@ knitr::opts_chunk$set(echo = FALSE)
 ## Today's topics
 
 - What is reproducible research?
+    - why is it important?
+    - software engineering
+    - in GIScience
+    - practical principles
 - How to do reproducible research in R
-- Tools: 
-    - R
-    - RStudio
     - Markdown
-    - Git
+    - *knitr* and *rmarkdown*
 
 Reference book: [Christopher Gandrud, *Reproducible Research with R and R Studio*](https://www.crcpress.com/Reproducible-Research-with-R-and-R-Studio/Gandrud/p/book/9781498715379) also available [on GitHub](https://github.com/christophergandrud/Rep-Res-Book)
 
@@ -250,9 +251,6 @@ These slides are written in Markdown
 ```
 ### This is a third level heading
 
-#### (fourth) Rendering depends on the software used
-
-
 Text can be specified as *italic* or **bold**
 
 - and list can be created
@@ -264,18 +262,14 @@ Text can be specified as *italic* or **bold**
 |Tables |Can         |Be       |
 |-------|------------|---------|
 |a bit  |complicated |at first |
+|but    |it gets     |easier   |
 ```
 
 
 
 ## Markdown example output
 
-<div class="plain">
-
 ### This is a third level heading
-
-#### (fourth) Rendering depends on the software used
-
 
 Text can be specified as *italic* or **bold**
 
@@ -288,5 +282,106 @@ Text can be specified as *italic* or **bold**
 |Tables |Can         |Be       |
 |-------|------------|---------|
 |a bit  |complicated |at first |
+|but    |it gets     |easier   |
 
-</div>
+
+
+
+## RMarkdown
+
+Markdown can be used in combination with R to dynamically create documents incorporating code and outcomes
+
+Two R libraries:
+
+- **knitr**
+    - Markdown (or LaTeX) with R snippets as input
+    - compiles it into HTML (or PDF)
+- **rmarkdown**
+    - uses knitr and pandoc
+    - to output files in different formats
+
+## R libraries
+
+As mentioned in earlier lectures, libraries are collections of functions
+
+Libraries can be installed in R using the function *install.packages* and loaded using the function *library*, as shown below (note the use of quote for the first and lack thereof in the second)
+
+```{r, echo=TRUE, eval=FALSE}
+install.packages("knitr")
+library(knitr)
+```
+
+Once a library is installed on a computer you don't need to install it again, but every script needs to load all the library that it uses.
+
+Once a library is loaded all its functions can be used.
+
+
+
+
+## RMarkdown example code
+
+````
+Let's write an example of **RMarkdown** including 
+
+- an *if-else* conditional statement
+- a *for* loop
+
+`r ''````{r, echo=TRUE}
+for (i in 1:4) {
+    if (i %% 2 == 0){
+        cat("even \n")
+    } else {
+        cat("odd \n")
+    }
+}
+`r ''````
+````
+
+
+
+## RMarkdown example output
+
+Let's write an example of **RMarkdown** including 
+
+- an *if-else* conditional statement
+- a *for* loop
+
+```{r, echo=TRUE}
+for (i in 1:4) {
+    if (i %% 2 == 0){
+        cat("even \n")
+    } else {
+        cat("odd \n")
+    }
+}
+```
+
+
+
+## RMarkdown example
+
+The *knitr* library also includes very useful functions such as *kable* that formats a *data.frame* object to be displayed using Markdown
+
+```{r, echo=TRUE}
+library(knitr)
+coverage_data <- read.csv("ofcom_mobile_coverage_2012.csv")
+kable(head(coverage_data[, 1:4], n=3))
+
+```
+
+
+
+## Practical session
+
+In the practical session we will see:
+
+- R and Markdown
+    - how to create R Markdown files
+    - that can be compiled in
+        - HTML
+        - PDF
+        - Microsoft Word
+- how to work with internet data
+    - direct access to data
+    - downloading files
+    - working with APIs

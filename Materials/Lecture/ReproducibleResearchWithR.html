@@ -57,12 +57,7 @@
 
     b, strong {
       font-weight: bold;
-      color: #b9202f;
-    }
-    
-    .plain b, strong {
-      font-weight: bold;
-      color: #000000;
+      /*color: #b9202f;*/
     }
 
     em {
@@ -82,6 +77,10 @@
 
 	  h2, h3{
 	    color: #b9202f;
+	  }
+	  
+	  table.rmdtable th{
+	    background: #b9202f;
 	  }
 	  
 	  .img80 img{
@@ -159,15 +158,19 @@
 <slide class=""><hgroup><h2>Today&#39;s topics</h2></hgroup><article  id="todays-topics">
 
 <ul>
-<li>What is reproducible research?</li>
-<li>How to do reproducible research in R</li>
-<li>Tools:
+<li>What is reproducible research?
 
 <ul>
-<li>R</li>
-<li>RStudio</li>
+<li>why is it important?</li>
+<li>software engineering</li>
+<li>in GIScience</li>
+<li>practical principles</li>
+</ul></li>
+<li>How to do reproducible research in R
+
+<ul>
 <li>Markdown</li>
-<li>Git</li>
+<li><em>knitr</em> and <em>rmarkdown</em></li>
 </ul></li>
 </ul>
 
@@ -439,9 +442,6 @@ system(&quot;cp Data/ofcom_mobile_coverage_2012.csv Materials/Lecture/&quot;)</p
 
 <pre >### This is a third level heading
 
-#### (fourth) Rendering depends on the software used
-
-
 Text can be specified as *italic* or **bold**
 
 - and list can be created
@@ -452,14 +452,12 @@ Text can be specified as *italic* or **bold**
 
 |Tables |Can         |Be       |
 |-------|------------|---------|
-|a bit  |complicated |at first |</pre>
+|a bit  |complicated |at first |
+|but    |it gets     |easier   |</pre>
 
 </article></slide><slide class=""><hgroup><h2>Markdown example output</h2></hgroup><article  id="markdown-example-output">
 
-<div class="plain">
 <h3>This is a third level heading</h3>
-
-<h4>(fourth) Rendering depends on the software used</h4>
 
 <p>Text can be specified as <em>italic</em> or <strong>bold</strong></p>
 
@@ -490,7 +488,146 @@ Text can be specified as *italic* or **bold**
 <td align="left">complicated</td>
 <td align="left">at first</td>
 </tr>
-</table></div></article></slide>
+<tr class="even">
+<td align="left">but</td>
+<td align="left">it gets</td>
+<td align="left">easier</td>
+</tr>
+</table>
+
+</article></slide><slide class=""><hgroup><h2>RMarkdown</h2></hgroup><article  id="rmarkdown">
+
+<p>Markdown can be used in combination with R to dynamically create documents incorporating code and outcomes</p>
+
+<p>Two R libraries:</p>
+
+<ul>
+<li><strong>knitr</strong>
+
+<ul>
+<li>Markdown (or LaTeX) with R snippets as input</li>
+<li>compiles it into HTML (or PDF)</li>
+</ul></li>
+<li><strong>rmarkdown</strong>
+
+<ul>
+<li>uses knitr and pandoc</li>
+<li>to output files in different formats</li>
+</ul></li>
+</ul>
+
+</article></slide><slide class=""><hgroup><h2>R libraries</h2></hgroup><article  id="r-libraries">
+
+<p>As mentioned in earlier lectures, libraries are collections of functions</p>
+
+<p>Libraries can be installed in R using the function <em>install.packages</em> and loaded using the function <em>library</em>, as shown below (note the use of quote for the first and lack thereof in the second)</p>
+
+<pre class = 'prettyprint lang-r'>install.packages(&quot;knitr&quot;)
+library(knitr)</pre>
+
+<p>Once a library is installed on a computer you don&#39;t need to install it again, but every script needs to load all the library that it uses.</p>
+
+<p>Once a library is loaded all its functions can be used.</p>
+
+</article></slide><slide class=""><hgroup><h2>RMarkdown example code</h2></hgroup><article  id="rmarkdown-example-code">
+
+<pre >Let&#39;s write an example of **RMarkdown** including 
+
+- an *if-else* conditional statement
+- a *for* loop
+
+```{r, echo=TRUE}
+for (i in 1:4) {
+    if (i %% 2 == 0){
+        cat(&quot;even \n&quot;)
+    } else {
+        cat(&quot;odd \n&quot;)
+    }
+}
+```</pre>
+
+</article></slide><slide class=""><hgroup><h2>RMarkdown example output</h2></hgroup><article  id="rmarkdown-example-output">
+
+<p>Let&#39;s write an example of <strong>RMarkdown</strong> including</p>
+
+<ul>
+<li>an <em>if-else</em> conditional statement</li>
+<li>a <em>for</em> loop</li>
+</ul>
+
+<pre class = 'prettyprint lang-r'>for (i in 1:4) {
+    if (i %% 2 == 0){
+        cat(&quot;even \n&quot;)
+    } else {
+        cat(&quot;odd \n&quot;)
+    }
+}</pre>
+
+<pre >## odd 
+## even 
+## odd 
+## even</pre>
+
+</article></slide><slide class=""><hgroup><h2>RMarkdown example</h2></hgroup><article  id="rmarkdown-example">
+
+<p>The <em>knitr</em> library also includes very useful functions such as <em>kable</em> that formats a <em>data.frame</em> object to be displayed using Markdown</p>
+
+<pre class = 'prettyprint lang-r'>library(knitr)
+coverage_data &lt;- read.csv(&quot;ofcom_mobile_coverage_2012.csv&quot;)
+kable(head(coverage_data[, 1:4], n=3))</pre>
+
+<table class = 'rmdtable'>
+<tr class="header">
+<th align="left">LocalAuthority</th>
+<th align="right">M2G_NoS</th>
+<th align="right">M2G_1op</th>
+<th align="right">M2G_2op</th>
+</tr>
+<tr class="odd">
+<td align="left">Aberdeen City</td>
+<td align="right">0.1</td>
+<td align="right">3.0</td>
+<td align="right">9.4</td>
+</tr>
+<tr class="even">
+<td align="left">Aberdeenshire</td>
+<td align="right">15.9</td>
+<td align="right">16.6</td>
+<td align="right">20.8</td>
+</tr>
+<tr class="odd">
+<td align="left">Abertawe - Swansea</td>
+<td align="right">1.0</td>
+<td align="right">7.7</td>
+<td align="right">15.1</td>
+</tr>
+</table>
+
+</article></slide><slide class=""><hgroup><h2>Practical session</h2></hgroup><article  id="practical-session">
+
+<p>In the practical session we will see:</p>
+
+<ul>
+<li>R and Markdown
+
+<ul>
+<li>how to create R Markdown files</li>
+<li>that can be compiled in
+
+<ul>
+<li>HTML</li>
+<li>PDF</li>
+<li>Microsoft Word</li>
+</ul></li>
+</ul></li>
+<li>how to work with internet data
+
+<ul>
+<li>direct access to data</li>
+<li>downloading files</li>
+<li>working with APIs</li>
+</ul></li>
+</ul></article></slide>
 
 
   <slide class="backdrop"></slide>
