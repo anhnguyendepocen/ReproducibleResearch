@@ -69,10 +69,10 @@ colnames(coverage_data) <- c("LocalAuthority",
 kable(head(coverage_data[, c(1, 2)], n=3))
 ```
 
-The table below shows local authorities with more than 10% of their area not covered by 2G network.
+The table below shows local authorities with more than 20% of their area not covered by 2G network.
 
 ```{r, echo=TRUE}
-kable(coverage_data[coverage_data$M2G.NoS>10, c("LocalAuthority", "M2G.NoS")])
+kable(coverage_data[coverage_data$M2G.NoS>20, c("LocalAuthority", "M2G.NoS")])
 ```
 
 ### Exercise 1
