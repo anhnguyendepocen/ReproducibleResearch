@@ -3294,7 +3294,7 @@ if (document.readyState !== "loading" &&
 ## Running under: macOS High Sierra 10.13.6
 ## 
 ## Matrix products: default
-## BLAS: /Library/Frameworks/R.framework/Versions/3.4/Resources/lib/libRblas.0.dylib
+## BLAS: /System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libBLAS.dylib
 ## LAPACK: /Library/Frameworks/R.framework/Versions/3.4/Resources/lib/libRlapack.dylib
 ## 
 ## locale:
@@ -3303,11 +3303,24 @@ if (document.readyState !== "loading" &&
 ## attached base packages:
 ## [1] stats     graphics  grDevices utils     datasets  methods   base     
 ## 
+## other attached packages:
+##  [1] knitr_1.17      rmarkdown_1.7   forcats_0.3.0   stringr_1.2.0  
+##  [5] purrr_0.2.5     tidyr_0.8.1     tibble_1.4.2    ggplot2_2.2.1  
+##  [9] tidyverse_1.2.1 bindrcpp_0.2    dplyr_0.7.4     readr_1.1.1    
+## 
 ## loaded via a namespace (and not attached):
-##  [1] compiler_3.4.2  backports_1.1.1 magrittr_1.5    rprojroot_1.2  
-##  [5] tools_3.4.2     htmltools_0.3.6 yaml_2.1.14     Rcpp_0.12.13   
-##  [9] stringi_1.1.5   rmarkdown_1.7   knitr_1.17      stringr_1.2.0  
-## [13] digest_0.6.12   evaluate_0.10.1</pre>
+##  [1] Rcpp_0.12.13     highr_0.6        cellranger_1.1.0 pillar_1.3.0    
+##  [5] compiler_3.4.2   plyr_1.8.4       bindr_0.1        bitops_1.0-6    
+##  [9] tools_3.4.2      digest_0.6.12    evaluate_0.10.1  lubridate_1.7.4 
+## [13] jsonlite_1.5     nlme_3.1-131     gtable_0.2.0     lattice_0.20-35 
+## [17] pkgconfig_2.0.1  rlang_0.2.2      cli_1.0.1        rstudioapi_0.8  
+## [21] curl_3.0         yaml_2.1.14      haven_1.1.2      xml2_1.2.0      
+## [25] httr_1.3.1       caTools_1.17.1   hms_0.3          rprojroot_1.2   
+## [29] grid_3.4.2       glue_1.3.0       R6_2.2.2         readxl_1.0.0    
+## [33] modelr_0.1.2     magrittr_1.5     htmltools_0.3.6  backports_1.1.1 
+## [37] scales_0.5.0     rvest_0.3.2      assertthat_0.2.0 colorspace_1.3-2
+## [41] stringi_1.1.5    lazyeval_0.2.1   munsell_0.4.3    broom_0.5.0     
+## [45] crayon_1.3.4</pre>
 
 </article></slide><slide class=""><hgroup><h2>(2) Everything is a (text) file</h2></hgroup><article  id="everything-is-a-text-file">
 
@@ -3376,12 +3389,24 @@ if (document.readyState !== "loading" &&
 # Date: Oct 22, 2018
 ##########
 
+# Step 0: install tidyverse
+# Un comment the install.packages command below
+# if the Tidyverse is not installed
+#install.packages(&quot;tidyverse&quot;)
+
+library(rmarkdown)
 
 # Step 1: execute the scripts that gather data
 # from Ofcom
 source(&quot;Data/Gather_Ofcom_data_2012.R&quot;)
 # and from the Department for Transport
-source(&quot;Data/Gather_DfT_data_2015.R&quot;)</pre>
+source(&quot;Data/Gather_DfT_data_2015.R&quot;)
+
+# Compile the lecture file
+rmarkdown::render(&quot;Materials/Lecture/ReproducibleResearchWithR.Rmd&quot;)
+
+# Compile the analysis document for the practical session
+rmarkdown::render(&quot;Materials/Lecture/ReproducibleResearchWithR.Rmd&quot;)</pre>
 
 </article></slide><slide class=""><hgroup><h2>(5) Organize, store, share</h2></hgroup><article  id="organize-store-share">
 
