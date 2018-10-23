@@ -1,5 +1,5 @@
 ---
-title: "Reproducible analysis in R"
+title: "A reproducible analysis in R"
 author: "Stefano De Sabbata"
 output: pdf_document
 ---
