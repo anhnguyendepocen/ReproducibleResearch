@@ -4,9 +4,11 @@
 # Date: Oct 22, 2018
 ##########
 
+# Step 0: install tidyverse
+install.packages("tidyverse")
 
-# Step 1: execute script to gather data
+# Step 1: execute the scripts that gather data
+# from Ofcom
 source("Data/Gather_Ofcom_data_2012.R")
-
-# Step 2: save a copy of the data in current folder
-system("cp Data/ofcom_mobile_coverage_2012.csv Materials/Lecture/")
+# and from the Department for Transport
+source("Data/Gather_DfT_data_2015.R")

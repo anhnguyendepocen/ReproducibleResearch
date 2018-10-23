@@ -176,19 +176,7 @@ A common solution are **make files**
 
 Example: *Make.R*
 
-```{r, echo=TRUE, eval=FALSE}
-##########
-# Example make file in R
-# Author: Stefano De Sabbata
-# Date: Oct 22, 2018
-##########
-
-
-# Step 1: execute script to gather data
-source("Data/Gather_Ofcom_data_2012.R")
-
-# Step 2: save a copy of the data in current folder
-system("cp Data/ofcom_mobile_coverage_2012.csv Materials/Lecture/")
+```{r, code=readLines('../../Make.R'), echo=TRUE, eval=FALSE}
 ```
 
 
@@ -364,7 +352,7 @@ The *knitr* library also includes very useful functions such as *kable* that for
 
 ```{r, echo=TRUE}
 library(knitr)
-coverage_data <- read.csv("ofcom_mobile_coverage_2012.csv")
+coverage_data <- read.csv("../../Data/ofcom_mobile_coverage_2012.csv")
 kable(head(coverage_data[, 1:4], n=3))
 
 ```
