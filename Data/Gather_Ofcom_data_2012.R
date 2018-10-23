@@ -1,6 +1,10 @@
 ##########
 # This code downloads data from the Ofcom website
 # regarding the UK mobile network coverage in 2012
+# This is also an example of how to use tidyverse
+# libraries and pipe-based programming
+# Author: Stefano De Sabbata
+# Date: 23 October 2018
 ##########
 
 library(tidyverse)
