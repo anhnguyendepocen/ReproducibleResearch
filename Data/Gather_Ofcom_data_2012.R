@@ -7,6 +7,9 @@
 # Date: 23 October 2018
 ##########
 
+# NOTE: if the zip file is not available at the URL in the script below
+# a copy is available in the Backup folder
+
 library(tidyverse)
 
 # Loading data from Ofcom website

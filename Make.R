@@ -4,12 +4,16 @@
 # Date: Oct 22, 2018
 ##########
 
-# Step 0: install tidyverse
 # Un comment the install.packages command below
 # if the Tidyverse is not installed
 #install.packages("tidyverse")
 
+# Load necessary libraries
 library(rmarkdown)
+
+# Step 0: Make clean
+# Delete data files and files compiled from R Markdown scripts
+source(Make_Clean.R)
 
 # Step 1: execute the scripts that gather data
 # from Ofcom

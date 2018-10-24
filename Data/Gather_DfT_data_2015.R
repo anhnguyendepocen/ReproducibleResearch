@@ -6,6 +6,8 @@
 # Date: 23 October 2018
 ##########
 
+# NOTE: if the zip file is not available at the URL in the script below
+# a copy is available in the Backup folder
 
 # Set the values: URL and file name
 data_url <- "http://data.dft.gov.uk/road-accidents-safety-data/RoadSafetyData_2015.zip"
