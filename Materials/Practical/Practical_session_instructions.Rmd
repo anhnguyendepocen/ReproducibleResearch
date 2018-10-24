@@ -59,7 +59,7 @@ The core Markdown notation used in this session is presented below and its inter
         - Analysis
         - Data
         - Utils
-    - Other bullet poit
+    - Other bullet point
 - And so on
     - and so forth
 
@@ -106,7 +106,7 @@ output: pdf_document
 ---
 ```
 
-Copy the following text below the document information.
+Copy the following text below the document information and the click on the *Knit* button on the bar above the editor panel (top-left area) in RStudio, on the left side. Check the resulting *pdf* document. Try add some of your own code (e.g., from previous practical sessions) and Markdown text, and compile the document again.
 
 ````
 # A nice heading
@@ -115,10 +115,10 @@ This is my first [RMarkdown](https://rmarkdown.rstudio.com/) document.
 
 The code below will print:
 
-- if the number is even
-    - even
-- else
-    - odd
+- "even"
+    - if the number is even
+- "odd"
+    - otherwise
 
 `r ''````{r, echo=TRUE}
 for (i in 1:4) {
@@ -133,19 +133,32 @@ for (i in 1:4) {
 
 
 
-
 # Part 2
+
+
 
 ## Repository
 
 The term "repository" refers to the whole collection of code, data, and other files that compose a project, stored on a version-control system. This project is available on [my GitHub ReproducibleResearch repository](https://github.com/sdesabbata/ReproducibleResearch). Download the zipped repository from BlackBoard or GitHub, or clone the repository using *git* if you are familiar with the tool.
 
+Once downloaded and un-zipped in a folder of your choice, observe the structure structure of the folder and sub-folders. The *Data* folders contains two scripts that will download some data in the same folder. A back-up version of those data can be found in the *Backup* folder. The *Analysis* folder contains a simple analysis of those data. The *Materials* section contains the lecture and practical session materials, and some additional folders containing the [IOSlides templates](https://bookdown.org/yihui/rmarkdown/ioslides-presentation.html) and the images. The *Utils* folder contains a script to update the git branch connected to the [GitHub Pages](https://pages.github.com/) for [this project](https://sdesabbata.github.io/ReproducibleResearch/).
+
 
 
 ## Build
 
-To build all the scripts in the repository in the correct order, please execute the *Make.R* script that you can find in the main folder.
+The *Make.R* script in the main folder can be used to "build" all the scripts in the repository in the correct order. The *Make_Clean.R* script can be used to delete all the files created by the *Make.R*.
+
+Build the project by running the *Make.R* script. That can be done by loading the file in RStudio and clicking on the *Source* button on bar above the editor panel (top-left area) in RStudio, right side.
+
+Alternatively, you can run the *Make.R* file using the command below from the RStudio console.
 
 ```{r, eval=FALSE}
 source('Make.R')
 ```
+
+
+
+# Part 3
+
+Once the project has been built, the *Reproducible_analysis_in_R.pdf* file will be available in the *Analysis* folder. Open the document, read and complete the exercise.

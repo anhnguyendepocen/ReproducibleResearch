@@ -8,6 +8,13 @@ This document is an small example of a reproducible analysis. This is an R Markd
 
 
 
+# Session info
+```{r}
+sessionInfo()
+```
+
+
+
 # Data
 
 This analysis document depends on *Gather_DfT_data_2015.R*, which retrieves some data from the Department for Transport and saves them in the *Data* folder. It is assumed that *Gather_DfT_data_2015.R* has been executed before this document is compiled. 
@@ -146,7 +153,7 @@ kable(head(
   vehicles[, 
     c("Accident_Index", "Vehicle_Type", "Age_of_Vehicle")
   ], 
-  n = 5
+  n = 10
 ))
 ```
 
@@ -160,7 +167,8 @@ accidents_vehicles <- merge(accidents, vehicles, by = "Accident_Index")
 # Only a subset of columns is selected
 kable(head(
   accidents_vehicles[, 
-    c("Accident_Index", "Urban_or_Rural_Area", "Accident_Severity", "Vehicle_Type", "Age_of_Vehicle")
+    c("Accident_Index", "Urban_or_Rural_Area", "Accident_Severity",
+      "Vehicle_Type", "Age_of_Vehicle")
   ], 
   n = 5
 ))
