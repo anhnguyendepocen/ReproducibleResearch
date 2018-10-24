@@ -3,6 +3,6 @@
 .RData
 .Ruserdata
 
-/Analysis/.pdf
-/Data/.csv
-/Data/.zip
+/Analysis/*.pdf
+/Data/*.csv
+/Data/*.zip
