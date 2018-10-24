@@ -4,6 +4,9 @@
 # Date: Oct 22, 2018
 ##########
 
+# Clean R Environment
+rm(list = ls())
+
 # Delete data files from Data folder
 unlink("Data/*.csv")
 unlink("Data/*.zip")
