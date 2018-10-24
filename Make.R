@@ -5,7 +5,7 @@
 ##########
 
 # Un comment the install.packages command below
-# if the Tidyverse is not installed
+# if Tidyverse is not installed
 #install.packages("tidyverse")
 
 # Load necessary libraries
