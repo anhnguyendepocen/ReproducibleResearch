@@ -15,15 +15,9 @@ install.packages("tidyverse")
 
 
 
-# Repository
+# Markdown
 
-The term "repository" refers to the whole collection of code, data, and other files that compose a project, stored on a version-control system. This project is available on [my GitHub ReproducibleResearch repository](https://github.com/sdesabbata/ReproducibleResearch). Download the zipped repository from BlackBoard or GitHub, or clone the repository using *git* if you are familiar with the tool.
-
-
-
-## R Markdown
-
-The main tool used to create this reproducible lecture and practical on reproducibility is RMarkdown. That is an R library that allows you to create scripts that mix the Markdown mark-up language and R, to create dynamic documents. RMarkdown script can be compiled, at which point, the Markdown notation is interpreted to create the output files, while the R code is executed and the output incorporated in the document.
+The main tool used to create this reproducible lecture and practical on reproducibility is [RMarkdown](https://rmarkdown.rstudio.com/) That is an R library that allows you to create scripts that mix the Markdown mark-up language and R, to create dynamic documents. RMarkdown script can be compiled, at which point, the Markdown notation is interpreted to create the output files, while the R code is executed and the output incorporated in the document.
 
 The core Markdown notation used in this session is presented below and its interpretation when compiled is further below.
 
@@ -68,6 +62,85 @@ The core Markdown notation used in this session is presented below and its inter
     - Other bullet poit
 - And so on
     - and so forth
+
+
+
+## R Markdown
+
+R code can be embedded in RMarkdown documents as in the example below. That will result in the code chunk be displayed within the document (as *echo=TRUE* is specified), followed by the output from the execution of the same code.
+
+````
+`r ''````{r, echo=TRUE}
+for (i in 1:4) {
+    if (i %% 2 == 0){
+        cat("even \n")
+    } else {
+        cat("odd \n")
+    }
+}
+`r ''````
+````
+
+```{r, echo=TRUE}
+for (i in 1:4) {
+    if (i %% 2 == 0){
+        cat("even \n")
+    } else {
+        cat("odd \n")
+    }
+}
+```
+
+
+
+# Part 1
+
+To create an RMarkdown document in RStudio, select *File > New File > R Markdown ...*. On the RMarkdown document creation menu, specify a title and your name as author, and select *PDF* as default output format. The new document should contain only the core document information, as in the example below.
+
+```
+---
+title: "Practical Session Instructions"
+author: "Stefano De Sabbata"
+date: "24 October 2018"
+output: pdf_document
+---
+```
+
+Copy the following text below the document information.
+
+````
+# A nice heading
+
+This is my first [RMarkdown](https://rmarkdown.rstudio.com/) document.
+
+The code below will print:
+
+- if the number is even
+    - even
+- else
+    - odd
+
+`r ''````{r, echo=TRUE}
+for (i in 1:4) {
+    if (i %% 2 == 0){
+        cat("even \n")
+    } else {
+        cat("odd \n")
+    }
+}
+`r ''````
+````
+
+
+
+
+# Part 2
+
+## Repository
+
+The term "repository" refers to the whole collection of code, data, and other files that compose a project, stored on a version-control system. This project is available on [my GitHub ReproducibleResearch repository](https://github.com/sdesabbata/ReproducibleResearch). Download the zipped repository from BlackBoard or GitHub, or clone the repository using *git* if you are familiar with the tool.
+
+
 
 ## Build
 
