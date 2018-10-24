@@ -25,4 +25,4 @@ source("Data/Gather_DfT_data_2015.R")
 rmarkdown::render("Materials/Lecture/ReproducibleResearchWithR.Rmd")
 
 # Compile the analysis document for the practical session
-rmarkdown::render("Materials/Lecture/ReproducibleResearchWithR.Rmd")
+rmarkdown::render("Analysis/Reproducible_analysis_in_R.Rmd", output_format = c("html_document", "pdf_document"))

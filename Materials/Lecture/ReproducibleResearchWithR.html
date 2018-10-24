@@ -383,15 +383,15 @@
 ##########
 
 # Un comment the install.packages command below
-# if the Tidyverse is not installed
+# if Tidyverse is not installed
 #install.packages(&quot;tidyverse&quot;)
 
 # Load necessary libraries
 library(rmarkdown)
 
 # Step 0: Make clean
-# Delete data files and files compiled from R Markdown scripts
-source(&quot;Make_Clean.R&quot;)
+# Uncomment the line below to delete data files and files compiled from R Markdown scripts
+#source(&quot;Make_Clean.R&quot;)
 
 # Step 1: execute the scripts that gather data
 # from Ofcom
@@ -403,7 +403,7 @@ source(&quot;Data/Gather_DfT_data_2015.R&quot;)
 rmarkdown::render(&quot;Materials/Lecture/ReproducibleResearchWithR.Rmd&quot;)
 
 # Compile the analysis document for the practical session
-rmarkdown::render(&quot;Materials/Lecture/ReproducibleResearchWithR.Rmd&quot;)</pre>
+rmarkdown::render(&quot;Analysis/Reproducible_analysis_in_R.Rmd&quot;, output_format = c(&quot;html_document&quot;, &quot;pdf_document&quot;))</pre>
 
 </article></slide><slide class=""><hgroup><h2>(5) Organize, store, share</h2></hgroup><article  id="organize-store-share">
 

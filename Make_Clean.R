@@ -9,6 +9,7 @@ unlink("Data/*.csv")
 unlink("Data/*.zip")
 
 # Delete compiled files from R Markdown scripts
+unlink("Analysis/*.html")
 unlink("Analysis/*.pdf")
 unlink("Materials/Lecture/*.html")
 unlink("Materials/Practical/*.pdf")
