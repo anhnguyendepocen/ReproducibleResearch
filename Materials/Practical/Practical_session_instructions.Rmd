@@ -1,0 +1,78 @@
+---
+title: "Practical Session Instructions"
+author: "Stefano De Sabbata"
+date: "24 October 2018"
+output: pdf_document
+---
+
+# Libraries
+
+This practical session will make use of the "Tidyverse" libraries. If not already installed, please install Tidyverse before cloning the repository, using the command below or via the *Tools > Install Packages* menu in RStudio.
+
+```{r, eval=FALSE}
+install.packages("tidyverse")
+```
+
+
+
+# Repository
+
+The term "repository" refers to the whole collection of code, data, and other files that compose a project, stored on a version-control system. This project is available on [my GitHub ReproducibleResearch repository](https://github.com/sdesabbata/ReproducibleResearch). Download the zipped repository from BlackBoard or GitHub, or clone the repository using *git* if you are familiar with the tool.
+
+
+
+## R Markdown
+
+The main tool used to create this reproducible lecture and practical on reproducibility is RMarkdown. That is an R library that allows you to create scripts that mix the Markdown mark-up language and R, to create dynamic documents. RMarkdown script can be compiled, at which point, the Markdown notation is interpreted to create the output files, while the R code is executed and the output incorporated in the document.
+
+The core Markdown notation used in this session is presented below and its interpretation when compiled is further below.
+
+```mark
+# Header 1
+## Header 2
+### Header 3
+#### Header 4
+##### Header 5
+
+**bold**
+*italics*
+
+[This is a link to the University of Leicester](http://le.ac.uk)
+
+- Example list
+    - Main folder
+        - Analysis
+        - Data
+        - Utils
+    - Other bullet poit
+- And so on
+    - and so forth
+```
+
+# Header 1
+## Header 2
+### Header 3
+#### Header 4
+##### Header 5
+
+**bold**
+*italics*
+
+[This is a link to the University of Leicester](http://le.ac.uk)
+
+- Example list
+    - Main folder
+        - Analysis
+        - Data
+        - Utils
+    - Other bullet poit
+- And so on
+    - and so forth
+
+## Build
+
+To build all the scripts in the repository in the correct order, please execute the *Make.R* script that you can find in the main folder.
+
+```{r, eval=FALSE}
+source('Make.R')
+```

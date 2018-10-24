@@ -1,6 +1,6 @@
 # Reproducible Research in R
 
-This repository provides the materials for a reproducible lecture on reproducibility using R and RStudio. Those include the [lecture slides](https://sdesabbata.github.io/ReproducibleResearch/Materials/Lecture/ReproducibleResearchWithR.html) prepared using [IOSlides](https://rmarkdown.rstudio.com/ioslides_presentation_format), as well as the instructions and an example of a [simple reproducible analysis](https://sdesabbata.github.io/ReproducibleResearch/Analysis/Reproducible_analysis_in_R.html) for a practical session prepared in RMarkdown.
+This repository provides the materials for a reproducible lecture on reproducibility using R and RStudio. Those include the [lecture slides](https://sdesabbata.github.io/ReproducibleResearch/Materials/Lecture/ReproducibleResearchWithR.html) prepared using [IOSlides](https://rmarkdown.rstudio.com/ioslides_presentation_format), as well as the instructions and an example of a [simple reproducible analysis](https://sdesabbata.github.io/ReproducibleResearch/Analysis/Reproducible_analysis_in_R.html) for a practical session prepared in [RMarkdown](https://rmarkdown.rstudio.com/).
 
 Reference book: [Christopher Gandrud, *Reproducible Research with R and R Studio*](https://www.crcpress.com/Reproducible-Research-with-R-and-R-Studio/Gandrud/p/book/9781498715379) also available [on GitHub](https://github.com/christophergandrud/Rep-Res-Book)
 
