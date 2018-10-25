@@ -145,6 +145,12 @@ Once downloaded and un-zipped in a folder of your choice, observe the structure 
 
 
 
+## Other necessary software
+
+In order to compile the RMarkdown scripts to *.pdf* documents, RMarkdown requires a LaTeX compiler. If you are working on the [University of Leicester](https://le.ac.uk/) Windows 10 computers, please close RStudio if open and install [MiKTeX](https://miktex.org/) from the *Software Centre* (this might take a few minutes). Once the installation is completed, re-open RStudio. MiKTeX should work fine for any other Windows system. On Linux, please install a TeX distribution, e.g. `sudo apt-get install texlive-full` on Ubuntu. On Mac OS, please install a TeX distribution such as [MacTeX](http://www.tug.org/mactex/).
+
+
+
 ## Build
 
 The *Make.R* script in the main folder can be used to "build" all the scripts in the repository in the correct order. The *Make_Clean.R* script can be used to delete all the files created by the *Make.R*.

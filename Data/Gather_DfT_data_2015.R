@@ -21,4 +21,4 @@ download.file(data_url, data_file_name)
 # or download.file(data_url, data_file_name, method="curl")
 
 # Unzip file in the Data folder
-unzip(data_file_name, exdir = "Data/")
+unzip(data_file_name, exdir = "Data")
