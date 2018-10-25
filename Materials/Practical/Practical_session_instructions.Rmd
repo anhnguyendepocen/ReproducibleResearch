@@ -151,7 +151,7 @@ Once downloaded and un-zipped in a folder of your choice, observe the structure 
 
 
 
-# Load
+## Load
 
 In RStudio, click on *File > Open Project...* and navigate to the folder where the files have been un-zipped. Select the file *ReproducibleResearch.Rproj* (the extension *.Rproj* might be hidden on Windows, the file type is *R Project*) and click *Open*. RStudio will load the whole project and set the directory where *ReproducibleResearch.Rproj* is located as working directory.
 
@@ -174,3 +174,9 @@ source('Make.R')
 # Part 3
 
 Once the project has been built, the *Reproducible_analysis_in_R.pdf* file will be available in the *Analysis* folder. Open the document, read and complete the exercise.
+
+
+
+## Close
+
+Once completed the practical, click on the project name *ReproducibleResearch* in the top-left corner in RStudio and then *Close project* to close the project. RStudio might show a prompt asking whether to save the *.RData* file before closing, in which case you can select to close without saving.
