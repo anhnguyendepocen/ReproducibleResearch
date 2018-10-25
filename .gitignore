@@ -5,6 +5,8 @@
 
 /Analysis/*.pdf
 /Analysis/*.tex
+/Analysis/*.log
 /Data/*.csv
 /Data/*.zip
 /Materials/Practical/*.tex
+/Materials/Practical/*.log
