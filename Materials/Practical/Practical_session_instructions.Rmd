@@ -137,6 +137,12 @@ for (i in 1:4) {
 
 
 
+## Other necessary software
+
+In order to compile the RMarkdown scripts to *.pdf* documents, RMarkdown requires a LaTeX compiler. If you are working on the [University of Leicester](https://le.ac.uk/) Windows 10 computers, please close RStudio if open and install [MiKTeX](https://miktex.org/) from the *Software Centre* (this might take a few minutes). Once the installation is completed, re-open RStudio. MiKTeX should work fine for any other Windows system. On Linux, please install a TeX distribution, e.g. `sudo apt-get install texlive-full` on Ubuntu. On Mac OS, please install a TeX distribution such as [MacTeX](http://www.tug.org/mactex/).
+
+
+
 ## Repository
 
 The term "repository" refers to the whole collection of code, data, and other files that compose a project, stored on a version-control system. This project is available on [my GitHub ReproducibleResearch repository](https://github.com/sdesabbata/ReproducibleResearch). Download the zipped repository from BlackBoard or GitHub, or clone the repository using *git* if you are familiar with the tool.
@@ -145,9 +151,9 @@ Once downloaded and un-zipped in a folder of your choice, observe the structure 
 
 
 
-## Other necessary software
+# Load
 
-In order to compile the RMarkdown scripts to *.pdf* documents, RMarkdown requires a LaTeX compiler. If you are working on the [University of Leicester](https://le.ac.uk/) Windows 10 computers, please close RStudio if open and install [MiKTeX](https://miktex.org/) from the *Software Centre* (this might take a few minutes). Once the installation is completed, re-open RStudio. MiKTeX should work fine for any other Windows system. On Linux, please install a TeX distribution, e.g. `sudo apt-get install texlive-full` on Ubuntu. On Mac OS, please install a TeX distribution such as [MacTeX](http://www.tug.org/mactex/).
+In RStudio, click on *File > Open Project...* and navigate to the folder where the files have been un-zipped. Select the file *ReproducibleResearch.Rproj* (the extension *.Rproj* might be hidden on Windows, the file type is *R Project*) and click *Open*. RStudio will load the whole project and set the directory where *ReproducibleResearch.Rproj* is located as working directory.
 
 
 

@@ -245,15 +245,19 @@ for (i in 1:4) {
 </div>
 <div id="part-2" class="section level1">
 <h1>Part 2</h1>
+<div id="other-necessary-software" class="section level2">
+<h2>Other necessary software</h2>
+<p>In order to compile the RMarkdown scripts to <em>.pdf</em> documents, RMarkdown requires a LaTeX compiler. If you are working on the <a href="https://le.ac.uk/">University of Leicester</a> Windows 10 computers, please close RStudio if open and install <a href="https://miktex.org/">MiKTeX</a> from the <em>Software Centre</em> (this might take a few minutes). Once the installation is completed, re-open RStudio. MiKTeX should work fine for any other Windows system. On Linux, please install a TeX distribution, e.g. <code>sudo apt-get install texlive-full</code> on Ubuntu. On Mac OS, please install a TeX distribution such as <a href="http://www.tug.org/mactex/">MacTeX</a>.</p>
+</div>
 <div id="repository" class="section level2">
 <h2>Repository</h2>
 <p>The term “repository” refers to the whole collection of code, data, and other files that compose a project, stored on a version-control system. This project is available on <a href="https://github.com/sdesabbata/ReproducibleResearch">my GitHub ReproducibleResearch repository</a>. Download the zipped repository from BlackBoard or GitHub, or clone the repository using <em>git</em> if you are familiar with the tool.</p>
 <p>Once downloaded and un-zipped in a folder of your choice, observe the structure structure of the folder and sub-folders. The <em>Data</em> folders contains two scripts that will download some data in the same folder. A back-up version of those data can be found in the <em>Backup</em> folder. The <em>Analysis</em> folder contains a simple analysis of those data. The <em>Materials</em> section contains the lecture and practical session materials, and some additional folders containing the <a href="https://bookdown.org/yihui/rmarkdown/ioslides-presentation.html">IOSlides templates</a> and the images. The <em>Utils</em> folder contains a script to update the git branch connected to the <a href="https://pages.github.com/">GitHub Pages</a> for <a href="https://sdesabbata.github.io/ReproducibleResearch/">this project</a>.</p>
 </div>
-<div id="other-necessary-software" class="section level2">
-<h2>Other necessary software</h2>
-<p>In order to compile the RMarkdown scripts to <em>.pdf</em> documents, RMarkdown requires a LaTeX compiler. If you are working on the <a href="https://le.ac.uk/">University of Leicester</a> Windows 10 computers, please close RStudio if open and install <a href="https://miktex.org/">MiKTeX</a> from the <em>Software Centre</em> (this might take a few minutes). Once the installation is completed, re-open RStudio. MiKTeX should work fine for any other Windows system. On Linux, please install a TeX distribution, e.g. <code>sudo apt-get install texlive-full</code> on Ubuntu. On Mac OS, please install a TeX distribution such as <a href="http://www.tug.org/mactex/">MacTeX</a>.</p>
 </div>
+<div id="load" class="section level1">
+<h1>Load</h1>
+<p>In RStudio, click on <em>File &gt; Open Project…</em> and navigate to the folder where the files have been un-zipped. Select the file <em>ReproducibleResearch.Rproj</em> (the extension <em>.Rproj</em> might be hidden on Windows, the file type is <em>R Project</em>) and click <em>Open</em>. RStudio will load the whole project and set the directory where <em>ReproducibleResearch.Rproj</em> is located as working directory.</p>
 <div id="build" class="section level2">
 <h2>Build</h2>
 <p>The <em>Make.R</em> script in the main folder can be used to “build” all the scripts in the repository in the correct order. The <em>Make_Clean.R</em> script can be used to delete all the files created by the <em>Make.R</em>.</p>
