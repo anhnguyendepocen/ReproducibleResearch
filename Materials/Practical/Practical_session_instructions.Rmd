@@ -139,7 +139,11 @@ for (i in 1:4) {
 
 ## Other necessary software
 
-In order to compile the RMarkdown scripts to *.pdf* documents, RMarkdown requires a LaTeX compiler. If you are working on the [University of Leicester](https://le.ac.uk/) Windows 10 computers, please close RStudio if open and install [MiKTeX](https://miktex.org/) from the *Software Centre* (this might take a few minutes). Once the installation is completed, re-open RStudio. MiKTeX should work fine for any other Windows system. On Linux, please install a TeX distribution, e.g. `sudo apt-get install texlive-full` on Ubuntu. On Mac OS, please install a TeX distribution such as [MacTeX](http://www.tug.org/mactex/).
+In order to compile the RMarkdown scripts to *.pdf* documents, RMarkdown requires a LaTeX compiler. 
+
+If you are working on the [University of Leicester](https://le.ac.uk/) Windows 10 computers, please check that [MiKTeX](https://miktex.org/) is installed in the *Software Centre*. If not close RStudio if open and install it (this might take a few minutes). Once the installation is completed, re-open RStudio. 
+
+MiKTeX should work fine for any other Windows system. On Linux, please install a TeX distribution, e.g. `sudo apt-get install texlive-full` on Ubuntu. On Mac OS, please install a TeX distribution such as [MacTeX](http://www.tug.org/mactex/).
 
 In RStudio, select *Tools > Global Options...*. In the *Swave* section, make sure that the following options are selected.
 
