@@ -14,7 +14,12 @@ Reference book: [Christopher Gandrud, *Reproducible Research with R and R Studio
 
 This project is based on the [R programming language](https://www.r-project.org/) and the [RStudio](https://www.rstudio.com/) integrated development environment (IDE). The first is necessary, the second is strongly recommended. Both are free, open source, and available for Microsoft Windows, Linux, and Mac OS. 
 
-In order to compile the RMarkdown scripts to *.pdf* documents, RMarkdown requires a LaTeX compiler. If you are working on the [University of Leicester](https://le.ac.uk/) Windows 10 computers, please close RStudio if open and install [MiKTeX](https://miktex.org/) from the *Software Centre* (this might take a few minutes). Once the installation is completed, re-open RStudio. MiKTeX should work fine for any other Windows system. On Linux, please install a TeX distribution, e.g. `sudo apt-get install texlive-full` on Ubuntu. On Mac OS, please install a TeX distribution such as [MacTeX](http://www.tug.org/mactex/).
+In order to compile the RMarkdown scripts to *.pdf* documents, RMarkdown requires a LaTeX compiler. If you are working on the [University of Leicester](https://le.ac.uk/) Windows 10 computers, please check that [MiKTeX](https://miktex.org/) is installed in the *Software Centre*. If not close RStudio if open and install it (this might take a few minutes). Once the installation is completed, re-open RStudio. MiKTeX should work fine for any other Windows system. On Linux, please install a TeX distribution, e.g. `sudo apt-get install texlive-full` on Ubuntu. On Mac OS, please install a TeX distribution such as [MacTeX](http://www.tug.org/mactex/).
+
+In RStudio, select *Tools > Global Options...*. In the *Swave* section, make sure that the following options are selected.
+
+- Weave Rnw files using: *knitr*
+- Typeset LaTeX into PDF using: *XeLaTeX*
 
 
 
