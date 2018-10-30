@@ -370,6 +370,5 @@ In the practical session we will see:
         - PDF
         - Microsoft Word
 - how to work with internet data
-    - direct access to data
     - downloading files
-    - working with APIs
+    - loading *.csv* files
