@@ -7,11 +7,13 @@ output: pdf_document
 
 # Libraries
 
-This practical session will make use of the "Tidyverse" libraries. If not already installed, please install Tidyverse before cloning the repository, using the command below or via the *Tools > Install Packages* menu in RStudio.
+As mentioned in earlier lectures, libraries are collections of functions. Libraries can be installed in R using the function *install.packages* or in RStudio via the *Tools > Install Packages* menu. This practical session will make use of the "Tidyverse" libraries, that includes a number of different libraries, including *knitr*. The *Make.R* script includes the instruction to install the Tidyverse if not currently installed. You can check whether the Tidyverse is installed by clicking on the *Packages* tab in the bottom-right pane in RStudio, and search for "tidyverse". If not installed, install it using the command below or via the *Tools > Install Packages* menu in RStudio.
 
 ```{r, eval=FALSE}
 install.packages("tidyverse")
 ```
+
+You can load a library using the function *library*, as shown below. Once a library is installed on a computer you don't need to install it again, but every script needs to load all the library that it uses. Once a library is loaded all its functions can be used.
 
 
 
@@ -93,6 +95,21 @@ for (i in 1:4) {
 
 
 
+## Other necessary software
+
+In order to compile the RMarkdown scripts to *.pdf* documents, RMarkdown requires a LaTeX compiler. 
+
+If you are working on the [University of Leicester](https://le.ac.uk/) Windows 10 computers, please check that [MiKTeX](https://miktex.org/) is installed in the *Software Centre*. If not close RStudio if open and install it (this might take a few minutes). Once the installation is completed, re-open RStudio. 
+
+MiKTeX should work fine for any other Windows system. Make sure to select "Always install missing packages on-the-fly" in the general settings of the MiKTex console, so that the appropriate packages are installed when the *.pdf* document is compiled. On Linux, please install a TeX distribution, e.g. `sudo apt-get install texlive-full` on Ubuntu. On Mac OS, please install a TeX distribution such as [MacTeX](http://www.tug.org/mactex/).
+
+In RStudio, select *Tools > Global Options...*. In the *Swave* section, make sure that the following options are selected.
+
+- Weave Rnw files using: *knitr*
+- Typeset LaTeX into PDF using: *XeLaTeX*
+
+
+
 # Part 1
 
 To create an RMarkdown document in RStudio, select *File > New File > R Markdown ...*. On the RMarkdown document creation menu, specify a title and your name as author, and select *PDF* as default output format. The new document should contain only the core document information, as in the example below.
@@ -135,20 +152,6 @@ for (i in 1:4) {
 
 # Part 2
 
-
-
-## Other necessary software
-
-In order to compile the RMarkdown scripts to *.pdf* documents, RMarkdown requires a LaTeX compiler. 
-
-If you are working on the [University of Leicester](https://le.ac.uk/) Windows 10 computers, please check that [MiKTeX](https://miktex.org/) is installed in the *Software Centre*. If not close RStudio if open and install it (this might take a few minutes). Once the installation is completed, re-open RStudio. 
-
-MiKTeX should work fine for any other Windows system. On Linux, please install a TeX distribution, e.g. `sudo apt-get install texlive-full` on Ubuntu. On Mac OS, please install a TeX distribution such as [MacTeX](http://www.tug.org/mactex/).
-
-In RStudio, select *Tools > Global Options...*. In the *Swave* section, make sure that the following options are selected.
-
-- Weave Rnw files using: *knitr*
-- Typeset LaTeX into PDF using: *XeLaTeX*
 
 
 ## Repository

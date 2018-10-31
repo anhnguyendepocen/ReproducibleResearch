@@ -27,9 +27,13 @@ The *Gather_DfT_data_2015.R* script is executed by the *Make.R* script. For your
 
 # Libraries and Packages
 
-As mentioned in earlier lectures, libraries are collections of functions. Libraries can be installed in R using the function *install.packages* or in RStudio via the *Tools > Install Packages* menu. This document assumes that the whole Tidyverse is installed, that includes a number of different libraries, including *knitr*. The *Make.R* script includes the instruction to install the Tidyverse if not currently installed. You can check whether the Tidyverse is installed by clicking on the *Packages* tab in the bottom-right pane in RStudio, and search for "tidyverse". If not installed, either install it manually or run the *Make.R* script.
+This document assumes that the whole Tidyverse is installed. If not already installed, please install Tidyverse before cloning the repository, using the command below or via the *Tools > Install Packages* menu in RStudio.
 
-You can load a library using the function *library*, as shown below. Once a library is installed on a computer you don't need to install it again, but every script needs to load all the library that it uses. Once a library is loaded all its functions can be used. Before staring, let's then load the *knitr* library that we need to use *kable* to create nice tables in R Markdown.
+```{r, eval=FALSE}
+install.packages("tidyverse")
+```
+
+Before staring, let's then load the *knitr* library that we need to use *kable* to create nice tables in R Markdown.
 
 ```{r, echo=TRUE}
 # Load knitr
