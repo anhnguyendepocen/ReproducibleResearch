@@ -128,8 +128,9 @@ $(document).ready(function () {
 
 <div id="libraries" class="section level1">
 <h1>Libraries</h1>
-<p>This practical session will make use of the “Tidyverse” libraries. If not already installed, please install Tidyverse before cloning the repository, using the command below or via the <em>Tools &gt; Install Packages</em> menu in RStudio.</p>
+<p>As mentioned in earlier lectures, libraries are collections of functions. Libraries can be installed in R using the function <em>install.packages</em> or in RStudio via the <em>Tools &gt; Install Packages</em> menu. This practical session will make use of the “Tidyverse” libraries, that includes a number of different libraries, including <em>knitr</em>. The <em>Make.R</em> script includes the instruction to install the Tidyverse if not currently installed. You can check whether the Tidyverse is installed by clicking on the <em>Packages</em> tab in the bottom-right pane in RStudio, and search for “tidyverse”. If not installed, install it using the command below or via the <em>Tools &gt; Install Packages</em> menu in RStudio.</p>
 <pre class="r"><code>install.packages(&quot;tidyverse&quot;)</code></pre>
+<p>You can load a library using the function <em>library</em>, as shown below. Once a library is installed on a computer you don’t need to install it again, but every script needs to load all the library that it uses. Once a library is loaded all its functions can be used.</p>
 </div>
 <div id="markdown" class="section level1">
 <h1>Markdown</h1>
@@ -211,6 +212,17 @@ for (i in 1:4) {
 ## odd 
 ## even</code></pre>
 </div>
+<div id="other-necessary-software" class="section level2">
+<h2>Other necessary software</h2>
+<p>In order to compile the RMarkdown scripts to <em>.pdf</em> documents, RMarkdown requires a LaTeX compiler.</p>
+<p>If you are working on the <a href="https://le.ac.uk/">University of Leicester</a> Windows 10 computers, please check that <a href="https://miktex.org/">MiKTeX</a> is installed in the <em>Software Centre</em>. If not close RStudio if open and install it (this might take a few minutes). Once the installation is completed, re-open RStudio.</p>
+<p>MiKTeX should work fine for any other Windows system. Make sure to select “Always install missing packages on-the-fly” in the general settings of the MiKTex console, so that the appropriate packages are installed when the <em>.pdf</em> document is compiled. On Linux, please install a TeX distribution, e.g. <code>sudo apt-get install texlive-full</code> on Ubuntu. On Mac OS, please install a TeX distribution such as <a href="http://www.tug.org/mactex/">MacTeX</a>.</p>
+<p>In RStudio, select <em>Tools &gt; Global Options…</em>. In the <em>Swave</em> section, make sure that the following options are selected.</p>
+<ul>
+<li>Weave Rnw files using: <em>knitr</em></li>
+<li>Typeset LaTeX into PDF using: <em>XeLaTeX</em></li>
+</ul>
+</div>
 </div>
 <div id="part-1" class="section level1">
 <h1>Part 1</h1>
@@ -245,17 +257,6 @@ for (i in 1:4) {
 </div>
 <div id="part-2" class="section level1">
 <h1>Part 2</h1>
-<div id="other-necessary-software" class="section level2">
-<h2>Other necessary software</h2>
-<p>In order to compile the RMarkdown scripts to <em>.pdf</em> documents, RMarkdown requires a LaTeX compiler.</p>
-<p>If you are working on the <a href="https://le.ac.uk/">University of Leicester</a> Windows 10 computers, please check that <a href="https://miktex.org/">MiKTeX</a> is installed in the <em>Software Centre</em>. If not close RStudio if open and install it (this might take a few minutes). Once the installation is completed, re-open RStudio.</p>
-<p>MiKTeX should work fine for any other Windows system. On Linux, please install a TeX distribution, e.g. <code>sudo apt-get install texlive-full</code> on Ubuntu. On Mac OS, please install a TeX distribution such as <a href="http://www.tug.org/mactex/">MacTeX</a>.</p>
-<p>In RStudio, select <em>Tools &gt; Global Options…</em>. In the <em>Swave</em> section, make sure that the following options are selected.</p>
-<ul>
-<li>Weave Rnw files using: <em>knitr</em></li>
-<li>Typeset LaTeX into PDF using: <em>XeLaTeX</em></li>
-</ul>
-</div>
 <div id="repository" class="section level2">
 <h2>Repository</h2>
 <p>The term “repository” refers to the whole collection of code, data, and other files that compose a project, stored on a version-control system. This project is available on <a href="https://github.com/sdesabbata/ReproducibleResearch">my GitHub ReproducibleResearch repository</a>. Download the zipped repository from BlackBoard or GitHub, or clone the repository using <em>git</em> if you are familiar with the tool.</p>

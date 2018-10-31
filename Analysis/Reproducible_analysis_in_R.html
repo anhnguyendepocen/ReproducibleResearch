@@ -175,8 +175,9 @@ $(document).ready(function () {
 </div>
 <div id="libraries-and-packages" class="section level1">
 <h1>Libraries and Packages</h1>
-<p>As mentioned in earlier lectures, libraries are collections of functions. Libraries can be installed in R using the function <em>install.packages</em> or in RStudio via the <em>Tools &gt; Install Packages</em> menu. This document assumes that the whole Tidyverse is installed, that includes a number of different libraries, including <em>knitr</em>. The <em>Make.R</em> script includes the instruction to install the Tidyverse if not currently installed. You can check whether the Tidyverse is installed by clicking on the <em>Packages</em> tab in the bottom-right pane in RStudio, and search for “tidyverse”. If not installed, either install it manually or run the <em>Make.R</em> script.</p>
-<p>You can load a library using the function <em>library</em>, as shown below. Once a library is installed on a computer you don’t need to install it again, but every script needs to load all the library that it uses. Once a library is loaded all its functions can be used. Before staring, let’s then load the <em>knitr</em> library that we need to use <em>kable</em> to create nice tables in R Markdown.</p>
+<p>This document assumes that the whole Tidyverse is installed. If not already installed, please install Tidyverse before cloning the repository, using the command below or via the <em>Tools &gt; Install Packages</em> menu in RStudio.</p>
+<pre class="r"><code>install.packages(&quot;tidyverse&quot;)</code></pre>
+<p>Before staring, let’s then load the <em>knitr</em> library that we need to use <em>kable</em> to create nice tables in R Markdown.</p>
 <pre class="r"><code># Load knitr
 library(knitr)</code></pre>
 </div>
