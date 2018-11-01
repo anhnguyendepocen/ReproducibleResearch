@@ -35,7 +35,7 @@ install.packages("tidyverse")
 
 ## Data
 
-The scripts in this project retrieve data from [Ofcom](https://www.ofcom.org.uk/research-and-data/data/opendata) and the [Department for Transport](https://www.gov.uk/government/organisations/department-for-transport) on 24 October 2018, and released under the [Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence) in the [United Kingdom](https://www.gov.uk/). A copy of those data files is provided in the *Backup* folder. Please see the [Open Government License v3](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/) on the [National Archives website](http://www.nationalarchives.gov.uk/) or the *LICENSE* file in this folder for.
+The scripts in this project retrieve data from [Ofcom](https://www.ofcom.org.uk/research-and-data/data/opendata) and the [Department for Transport](https://www.gov.uk/government/organisations/department-for-transport) and released under the [Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence) in the [United Kingdom](https://www.gov.uk/). A copy of those data files downloaded on 24 October 2018 is provided in the *Backup* folder. Please see the [Open Government License v3](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/) on the [National Archives website](http://www.nationalarchives.gov.uk/) or the *LICENSE* file in this folder for.
 
 
 
